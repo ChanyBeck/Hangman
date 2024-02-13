@@ -42,39 +42,37 @@
             panelWordDisplay = new FlowLayoutPanel();
             lblWordDisplay = new Label();
             lblWordGuess = new Label();
-            panelLetterGuess = new FlowLayoutPanel();
-            lblLetterGuess = new Label();
             tblLetterDisplay = new TableLayoutPanel();
+            btnAlphaQ = new Button();
+            btnAlphaP = new Button();
+            btnAlphaO = new Button();
+            btnAlphaN = new Button();
+            btnAlphaM = new Button();
+            btnAlphaL = new Button();
+            btnAlphaK = new Button();
+            btnAlphaJ = new Button();
+            btnAlphaI = new Button();
+            btnAlphaH = new Button();
+            btnAlphaE = new Button();
+            btnAlphaD = new Button();
+            btnAlphaV = new Button();
+            btnAlphaU = new Button();
+            btnAlphaT = new Button();
+            btnAlphaY = new Button();
+            btnAlphaX = new Button();
+            btnAlphaW = new Button();
+            btnAlphaS = new Button();
+            btnAlphaR = new Button();
             btnAlphaB = new Button();
             btnAlphaA = new Button();
-            btnAlphaX = new Button();
-            this.btnAlphaY = new Button();
-            this.btnAlphaV = new Button();
-            this.btnAlphaW = new Button();
-            this.btnAlphaU = new Button();
-            this.btnAlphaR = new Button();
-            this.btnAlphaS = new Button();
-            this.btnAlphaT = new Button();
             btnAlphaC = new Button();
-            btnAlphaD = new Button();
-            btnAlphaE = new Button();
             btnAlphaG = new Button();
-            this.btnAlphaH = new Button();
-            btnAlphaI = new Button();
-            btnAlphaJ = new Button();
-            btnAlphaK = new Button();
-            btnAlphaL = new Button();
-            btnAlphaM = new Button();
-            this.btnAlphaN = new Button();
-            this.btnAlphaO = new Button();
-            this.btnAlphaP = new Button();
-            this.btnAlphaQ = new Button();
             btnAlphaF = new Button();
             btnAlphaZ = new Button();
+            lblLetterGuess = new Label();
             Menu.SuspendLayout();
             tblMain.SuspendLayout();
             panelWordDisplay.SuspendLayout();
-            panelLetterGuess.SuspendLayout();
             tblLetterDisplay.SuspendLayout();
             SuspendLayout();
             // 
@@ -151,15 +149,15 @@
             tblMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.037735F));
             tblMain.Controls.Add(panelGallows, 0, 0);
             tblMain.Controls.Add(panelWordDisplay, 1, 0);
-            tblMain.Controls.Add(panelLetterGuess, 1, 1);
             tblMain.Controls.Add(tblLetterDisplay, 1, 2);
+            tblMain.Controls.Add(lblLetterGuess, 1, 1);
             tblMain.Dock = DockStyle.Fill;
             tblMain.Location = new Point(0, 49);
             tblMain.Name = "tblMain";
             tblMain.RowCount = 3;
-            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 38.38772F));
-            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 23.2245655F));
-            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 38.38772F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 41.827877F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 16.3442421F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 41.827877F));
             tblMain.Size = new Size(827, 443);
             tblMain.TabIndex = 1;
             // 
@@ -179,7 +177,7 @@
             panelWordDisplay.Dock = DockStyle.Fill;
             panelWordDisplay.Location = new Point(283, 3);
             panelWordDisplay.Name = "panelWordDisplay";
-            panelWordDisplay.Size = new Size(541, 164);
+            panelWordDisplay.Size = new Size(541, 179);
             panelWordDisplay.TabIndex = 1;
             // 
             // lblWordDisplay
@@ -188,35 +186,18 @@
             lblWordDisplay.BackColor = SystemColors.ScrollBar;
             lblWordDisplay.Location = new Point(3, 0);
             lblWordDisplay.Name = "lblWordDisplay";
-            lblWordDisplay.Size = new Size(520, 35);
+            lblWordDisplay.Size = new Size(535, 35);
             lblWordDisplay.TabIndex = 0;
             lblWordDisplay.Text = "Word";
             lblWordDisplay.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblWordGuess
             // 
+            lblWordGuess.Font = new Font("Webdings", 36F, FontStyle.Regular, GraphicsUnit.Point);
             lblWordGuess.Location = new Point(3, 35);
             lblWordGuess.Name = "lblWordGuess";
-            lblWordGuess.Size = new Size(520, 112);
+            lblWordGuess.Size = new Size(535, 129);
             lblWordGuess.TabIndex = 1;
-            lblWordGuess.Text = "label1";
-            // 
-            // panelLetterGuess
-            // 
-            panelLetterGuess.Controls.Add(lblLetterGuess);
-            panelLetterGuess.Dock = DockStyle.Fill;
-            panelLetterGuess.Location = new Point(283, 173);
-            panelLetterGuess.Name = "panelLetterGuess";
-            panelLetterGuess.Size = new Size(541, 96);
-            panelLetterGuess.TabIndex = 2;
-            // 
-            // lblLetterGuess
-            // 
-            lblLetterGuess.Location = new Point(3, 0);
-            lblLetterGuess.Name = "lblLetterGuess";
-            lblLetterGuess.Size = new Size(520, 90);
-            lblLetterGuess.TabIndex = 0;
-            lblLetterGuess.Text = "label1";
             // 
             // tblLetterDisplay
             // 
@@ -230,26 +211,26 @@
             tblLetterDisplay.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.1111107F));
             tblLetterDisplay.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.1111107F));
             tblLetterDisplay.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 11.1111107F));
-            tblLetterDisplay.Controls.Add(this.btnAlphaQ, 8, 1);
-            tblLetterDisplay.Controls.Add(this.btnAlphaP, 7, 1);
-            tblLetterDisplay.Controls.Add(this.btnAlphaO, 6, 1);
-            tblLetterDisplay.Controls.Add(this.btnAlphaN, 5, 1);
+            tblLetterDisplay.Controls.Add(btnAlphaQ, 8, 1);
+            tblLetterDisplay.Controls.Add(btnAlphaP, 7, 1);
+            tblLetterDisplay.Controls.Add(btnAlphaO, 6, 1);
+            tblLetterDisplay.Controls.Add(btnAlphaN, 5, 1);
             tblLetterDisplay.Controls.Add(btnAlphaM, 4, 1);
             tblLetterDisplay.Controls.Add(btnAlphaL, 3, 1);
             tblLetterDisplay.Controls.Add(btnAlphaK, 2, 1);
             tblLetterDisplay.Controls.Add(btnAlphaJ, 1, 1);
             tblLetterDisplay.Controls.Add(btnAlphaI, 0, 1);
-            tblLetterDisplay.Controls.Add(this.btnAlphaH, 8, 0);
+            tblLetterDisplay.Controls.Add(btnAlphaH, 8, 0);
             tblLetterDisplay.Controls.Add(btnAlphaE, 5, 0);
             tblLetterDisplay.Controls.Add(btnAlphaD, 4, 0);
-            tblLetterDisplay.Controls.Add(this.btnAlphaT, 0, 2);
-            tblLetterDisplay.Controls.Add(this.btnAlphaS, 0, 2);
-            tblLetterDisplay.Controls.Add(this.btnAlphaR, 0, 2);
-            tblLetterDisplay.Controls.Add(this.btnAlphaU, 0, 2);
-            tblLetterDisplay.Controls.Add(this.btnAlphaW, 0, 2);
-            tblLetterDisplay.Controls.Add(this.btnAlphaV, 0, 2);
-            tblLetterDisplay.Controls.Add(this.btnAlphaY, 0, 2);
+            tblLetterDisplay.Controls.Add(btnAlphaV, 0, 2);
+            tblLetterDisplay.Controls.Add(btnAlphaU, 0, 2);
+            tblLetterDisplay.Controls.Add(btnAlphaT, 0, 2);
+            tblLetterDisplay.Controls.Add(btnAlphaY, 0, 2);
             tblLetterDisplay.Controls.Add(btnAlphaX, 0, 2);
+            tblLetterDisplay.Controls.Add(btnAlphaW, 0, 2);
+            tblLetterDisplay.Controls.Add(btnAlphaS, 0, 2);
+            tblLetterDisplay.Controls.Add(btnAlphaR, 0, 2);
             tblLetterDisplay.Controls.Add(btnAlphaB, 2, 0);
             tblLetterDisplay.Controls.Add(btnAlphaA, 1, 0);
             tblLetterDisplay.Controls.Add(btnAlphaC, 3, 0);
@@ -257,22 +238,222 @@
             tblLetterDisplay.Controls.Add(btnAlphaF, 6, 0);
             tblLetterDisplay.Controls.Add(btnAlphaZ, 8, 2);
             tblLetterDisplay.Dock = DockStyle.Fill;
-            tblLetterDisplay.Location = new Point(283, 275);
+            tblLetterDisplay.Location = new Point(283, 260);
             tblLetterDisplay.Name = "tblLetterDisplay";
             tblLetterDisplay.RowCount = 3;
             tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tblLetterDisplay.Size = new Size(541, 165);
+            tblLetterDisplay.Size = new Size(541, 180);
             tblLetterDisplay.TabIndex = 3;
+            // 
+            // btnAlphaQ
+            // 
+            btnAlphaQ.Dock = DockStyle.Fill;
+            btnAlphaQ.Location = new Point(483, 63);
+            btnAlphaQ.Name = "btnAlphaQ";
+            btnAlphaQ.Size = new Size(55, 54);
+            btnAlphaQ.TabIndex = 26;
+            btnAlphaQ.Text = "Q";
+            btnAlphaQ.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaP
+            // 
+            btnAlphaP.Dock = DockStyle.Fill;
+            btnAlphaP.Location = new Point(423, 63);
+            btnAlphaP.Name = "btnAlphaP";
+            btnAlphaP.Size = new Size(54, 54);
+            btnAlphaP.TabIndex = 25;
+            btnAlphaP.Text = "P";
+            btnAlphaP.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaO
+            // 
+            btnAlphaO.Dock = DockStyle.Fill;
+            btnAlphaO.Location = new Point(363, 63);
+            btnAlphaO.Name = "btnAlphaO";
+            btnAlphaO.Size = new Size(54, 54);
+            btnAlphaO.TabIndex = 24;
+            btnAlphaO.Text = "O";
+            btnAlphaO.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaN
+            // 
+            btnAlphaN.Dock = DockStyle.Fill;
+            btnAlphaN.Location = new Point(303, 63);
+            btnAlphaN.Name = "btnAlphaN";
+            btnAlphaN.Size = new Size(54, 54);
+            btnAlphaN.TabIndex = 23;
+            btnAlphaN.Text = "N";
+            btnAlphaN.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaM
+            // 
+            btnAlphaM.Dock = DockStyle.Fill;
+            btnAlphaM.Location = new Point(243, 63);
+            btnAlphaM.Name = "btnAlphaM";
+            btnAlphaM.Size = new Size(54, 54);
+            btnAlphaM.TabIndex = 22;
+            btnAlphaM.Text = "M";
+            btnAlphaM.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaL
+            // 
+            btnAlphaL.Dock = DockStyle.Fill;
+            btnAlphaL.Location = new Point(183, 63);
+            btnAlphaL.Name = "btnAlphaL";
+            btnAlphaL.Size = new Size(54, 54);
+            btnAlphaL.TabIndex = 21;
+            btnAlphaL.Text = "L";
+            btnAlphaL.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaK
+            // 
+            btnAlphaK.Dock = DockStyle.Fill;
+            btnAlphaK.Location = new Point(123, 63);
+            btnAlphaK.Name = "btnAlphaK";
+            btnAlphaK.Size = new Size(54, 54);
+            btnAlphaK.TabIndex = 20;
+            btnAlphaK.Text = "K";
+            btnAlphaK.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaJ
+            // 
+            btnAlphaJ.Dock = DockStyle.Fill;
+            btnAlphaJ.Location = new Point(63, 63);
+            btnAlphaJ.Name = "btnAlphaJ";
+            btnAlphaJ.Size = new Size(54, 54);
+            btnAlphaJ.TabIndex = 19;
+            btnAlphaJ.Text = "J";
+            btnAlphaJ.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaI
+            // 
+            btnAlphaI.Dock = DockStyle.Fill;
+            btnAlphaI.Location = new Point(3, 63);
+            btnAlphaI.Name = "btnAlphaI";
+            btnAlphaI.Size = new Size(54, 54);
+            btnAlphaI.TabIndex = 18;
+            btnAlphaI.Text = "I";
+            btnAlphaI.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaH
+            // 
+            btnAlphaH.Dock = DockStyle.Fill;
+            btnAlphaH.Location = new Point(483, 3);
+            btnAlphaH.Name = "btnAlphaH";
+            btnAlphaH.Size = new Size(55, 54);
+            btnAlphaH.TabIndex = 17;
+            btnAlphaH.Text = "H";
+            btnAlphaH.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaE
+            // 
+            btnAlphaE.Dock = DockStyle.Fill;
+            btnAlphaE.Location = new Point(303, 3);
+            btnAlphaE.Name = "btnAlphaE";
+            btnAlphaE.Size = new Size(54, 54);
+            btnAlphaE.TabIndex = 14;
+            btnAlphaE.Text = "E";
+            btnAlphaE.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaD
+            // 
+            btnAlphaD.Dock = DockStyle.Fill;
+            btnAlphaD.Location = new Point(243, 3);
+            btnAlphaD.Name = "btnAlphaD";
+            btnAlphaD.Size = new Size(54, 54);
+            btnAlphaD.TabIndex = 13;
+            btnAlphaD.Text = "D";
+            btnAlphaD.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaV
+            // 
+            btnAlphaV.Dock = DockStyle.Fill;
+            btnAlphaV.Location = new Point(243, 123);
+            btnAlphaV.Name = "btnAlphaV";
+            btnAlphaV.Size = new Size(54, 54);
+            btnAlphaV.TabIndex = 10;
+            btnAlphaV.Text = "V";
+            btnAlphaV.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaU
+            // 
+            btnAlphaU.Dock = DockStyle.Fill;
+            btnAlphaU.Location = new Point(183, 123);
+            btnAlphaU.Name = "btnAlphaU";
+            btnAlphaU.Size = new Size(54, 54);
+            btnAlphaU.TabIndex = 9;
+            btnAlphaU.Text = "U";
+            btnAlphaU.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaT
+            // 
+            btnAlphaT.Dock = DockStyle.Fill;
+            btnAlphaT.Location = new Point(123, 123);
+            btnAlphaT.Name = "btnAlphaT";
+            btnAlphaT.Size = new Size(54, 54);
+            btnAlphaT.TabIndex = 8;
+            btnAlphaT.Text = "T";
+            btnAlphaT.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaY
+            // 
+            btnAlphaY.Dock = DockStyle.Fill;
+            btnAlphaY.Location = new Point(423, 123);
+            btnAlphaY.Name = "btnAlphaY";
+            btnAlphaY.Size = new Size(54, 54);
+            btnAlphaY.TabIndex = 7;
+            btnAlphaY.Text = "Y";
+            btnAlphaY.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaX
+            // 
+            btnAlphaX.Dock = DockStyle.Fill;
+            btnAlphaX.Location = new Point(363, 123);
+            btnAlphaX.Name = "btnAlphaX";
+            btnAlphaX.Size = new Size(54, 54);
+            btnAlphaX.TabIndex = 6;
+            btnAlphaX.Text = "X";
+            btnAlphaX.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaW
+            // 
+            btnAlphaW.Dock = DockStyle.Fill;
+            btnAlphaW.Location = new Point(303, 123);
+            btnAlphaW.Name = "btnAlphaW";
+            btnAlphaW.Size = new Size(54, 54);
+            btnAlphaW.TabIndex = 5;
+            btnAlphaW.Text = "W";
+            btnAlphaW.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaS
+            // 
+            btnAlphaS.Dock = DockStyle.Fill;
+            btnAlphaS.Location = new Point(63, 123);
+            btnAlphaS.Name = "btnAlphaS";
+            btnAlphaS.Size = new Size(54, 54);
+            btnAlphaS.TabIndex = 4;
+            btnAlphaS.Text = "S";
+            btnAlphaS.UseVisualStyleBackColor = true;
+            // 
+            // btnAlphaR
+            // 
+            btnAlphaR.Dock = DockStyle.Fill;
+            btnAlphaR.Location = new Point(3, 123);
+            btnAlphaR.Name = "btnAlphaR";
+            btnAlphaR.Size = new Size(54, 54);
+            btnAlphaR.TabIndex = 3;
+            btnAlphaR.Text = "R";
+            btnAlphaR.UseVisualStyleBackColor = true;
             // 
             // btnAlphaB
             // 
             btnAlphaB.Dock = DockStyle.Fill;
             btnAlphaB.Location = new Point(123, 3);
             btnAlphaB.Name = "btnAlphaB";
-            btnAlphaB.Size = new Size(54, 49);
+            btnAlphaB.Size = new Size(54, 54);
             btnAlphaB.TabIndex = 2;
             btnAlphaB.Text = "B";
             btnAlphaB.UseVisualStyleBackColor = true;
@@ -282,237 +463,37 @@
             btnAlphaA.Dock = DockStyle.Fill;
             btnAlphaA.Location = new Point(63, 3);
             btnAlphaA.Name = "btnAlphaA";
-            btnAlphaA.Size = new Size(54, 49);
+            btnAlphaA.Size = new Size(54, 54);
             btnAlphaA.TabIndex = 1;
             btnAlphaA.Text = "A";
             btnAlphaA.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaX
-            // 
-            btnAlphaX.Dock = DockStyle.Fill;
-            btnAlphaX.Location = new Point(3, 113);
-            btnAlphaX.Name = "btnAlphaX";
-            btnAlphaX.Size = new Size(54, 49);
-            btnAlphaX.TabIndex = 3;
-            btnAlphaX.Text = "X";
-            btnAlphaX.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaY
-            // 
-            this.btnAlphaY.Dock = DockStyle.Fill;
-            this.btnAlphaY.Location = new Point(63, 113);
-            this.btnAlphaY.Name = "btnAlphaY";
-            this.btnAlphaY.Size = new Size(54, 49);
-            this.btnAlphaY.TabIndex = 4;
-            this.btnAlphaY.Text = "Y";
-            this.btnAlphaY.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaV
-            // 
-            this.btnAlphaV.Dock = DockStyle.Fill;
-            this.btnAlphaV.Location = new Point(303, 113);
-            this.btnAlphaV.Name = "btnAlphaV";
-            this.btnAlphaV.Size = new Size(54, 49);
-            this.btnAlphaV.TabIndex = 5;
-            this.btnAlphaV.Text = "V";
-            this.btnAlphaV.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaW
-            // 
-            this.btnAlphaW.Dock = DockStyle.Fill;
-            this.btnAlphaW.Location = new Point(363, 113);
-            this.btnAlphaW.Name = "btnAlphaW";
-            this.btnAlphaW.Size = new Size(54, 49);
-            this.btnAlphaW.TabIndex = 6;
-            this.btnAlphaW.Text = "W";
-            this.btnAlphaW.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaU
-            // 
-            this.btnAlphaU.Dock = DockStyle.Fill;
-            this.btnAlphaU.Location = new Point(423, 113);
-            this.btnAlphaU.Name = "btnAlphaU";
-            this.btnAlphaU.Size = new Size(54, 49);
-            this.btnAlphaU.TabIndex = 7;
-            this.btnAlphaU.Text = "U";
-            this.btnAlphaU.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaR
-            // 
-            this.btnAlphaR.Dock = DockStyle.Fill;
-            this.btnAlphaR.Location = new Point(123, 113);
-            this.btnAlphaR.Name = "btnAlphaR";
-            this.btnAlphaR.Size = new Size(54, 49);
-            this.btnAlphaR.TabIndex = 8;
-            this.btnAlphaR.Text = "R";
-            this.btnAlphaR.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaS
-            // 
-            this.btnAlphaS.Dock = DockStyle.Fill;
-            this.btnAlphaS.Location = new Point(183, 113);
-            this.btnAlphaS.Name = "btnAlphaS";
-            this.btnAlphaS.Size = new Size(54, 49);
-            this.btnAlphaS.TabIndex = 9;
-            this.btnAlphaS.Text = "S";
-            this.btnAlphaS.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaT
-            // 
-            this.btnAlphaT.Dock = DockStyle.Fill;
-            this.btnAlphaT.Location = new Point(243, 113);
-            this.btnAlphaT.Name = "btnAlphaT";
-            this.btnAlphaT.Size = new Size(54, 49);
-            this.btnAlphaT.TabIndex = 10;
-            this.btnAlphaT.Text = "T";
-            this.btnAlphaT.UseVisualStyleBackColor = true;
             // 
             // btnAlphaC
             // 
             btnAlphaC.Dock = DockStyle.Fill;
             btnAlphaC.Location = new Point(183, 3);
             btnAlphaC.Name = "btnAlphaC";
-            btnAlphaC.Size = new Size(54, 49);
+            btnAlphaC.Size = new Size(54, 54);
             btnAlphaC.TabIndex = 12;
             btnAlphaC.Text = "C";
             btnAlphaC.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaD
-            // 
-            btnAlphaD.Dock = DockStyle.Fill;
-            btnAlphaD.Location = new Point(243, 3);
-            btnAlphaD.Name = "btnAlphaD";
-            btnAlphaD.Size = new Size(54, 49);
-            btnAlphaD.TabIndex = 13;
-            btnAlphaD.Text = "D";
-            btnAlphaD.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaE
-            // 
-            btnAlphaE.Dock = DockStyle.Fill;
-            btnAlphaE.Location = new Point(303, 3);
-            btnAlphaE.Name = "btnAlphaE";
-            btnAlphaE.Size = new Size(54, 49);
-            btnAlphaE.TabIndex = 14;
-            btnAlphaE.Text = "E";
-            btnAlphaE.UseVisualStyleBackColor = true;
             // 
             // btnAlphaG
             // 
             btnAlphaG.Dock = DockStyle.Fill;
             btnAlphaG.Location = new Point(423, 3);
             btnAlphaG.Name = "btnAlphaG";
-            btnAlphaG.Size = new Size(54, 49);
+            btnAlphaG.Size = new Size(54, 54);
             btnAlphaG.TabIndex = 15;
             btnAlphaG.Text = "G";
             btnAlphaG.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaH
-            // 
-            this.btnAlphaH.Dock = DockStyle.Fill;
-            this.btnAlphaH.Location = new Point(483, 3);
-            this.btnAlphaH.Name = "btnAlphaH";
-            this.btnAlphaH.Size = new Size(55, 49);
-            this.btnAlphaH.TabIndex = 17;
-            this.btnAlphaH.Text = "H";
-            this.btnAlphaH.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaI
-            // 
-            btnAlphaI.Dock = DockStyle.Fill;
-            btnAlphaI.Location = new Point(3, 58);
-            btnAlphaI.Name = "btnAlphaI";
-            btnAlphaI.Size = new Size(54, 49);
-            btnAlphaI.TabIndex = 18;
-            btnAlphaI.Text = "I";
-            btnAlphaI.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaJ
-            // 
-            btnAlphaJ.Dock = DockStyle.Fill;
-            btnAlphaJ.Location = new Point(63, 58);
-            btnAlphaJ.Name = "btnAlphaJ";
-            btnAlphaJ.Size = new Size(54, 49);
-            btnAlphaJ.TabIndex = 19;
-            btnAlphaJ.Text = "J";
-            btnAlphaJ.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaK
-            // 
-            btnAlphaK.Dock = DockStyle.Fill;
-            btnAlphaK.Location = new Point(123, 58);
-            btnAlphaK.Name = "btnAlphaK";
-            btnAlphaK.Size = new Size(54, 49);
-            btnAlphaK.TabIndex = 20;
-            btnAlphaK.Text = "K";
-            btnAlphaK.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaL
-            // 
-            btnAlphaL.Dock = DockStyle.Fill;
-            btnAlphaL.Location = new Point(183, 58);
-            btnAlphaL.Name = "btnAlphaL";
-            btnAlphaL.Size = new Size(54, 49);
-            btnAlphaL.TabIndex = 21;
-            btnAlphaL.Text = "L";
-            btnAlphaL.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaM
-            // 
-            btnAlphaM.Dock = DockStyle.Fill;
-            btnAlphaM.Location = new Point(243, 58);
-            btnAlphaM.Name = "btnAlphaM";
-            btnAlphaM.Size = new Size(54, 49);
-            btnAlphaM.TabIndex = 22;
-            btnAlphaM.Text = "M";
-            btnAlphaM.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaN
-            // 
-            this.btnAlphaN.Dock = DockStyle.Fill;
-            this.btnAlphaN.Location = new Point(303, 58);
-            this.btnAlphaN.Name = "btnAlphaN";
-            this.btnAlphaN.Size = new Size(54, 49);
-            this.btnAlphaN.TabIndex = 23;
-            this.btnAlphaN.Text = "N";
-            this.btnAlphaN.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaO
-            // 
-            this.btnAlphaO.Dock = DockStyle.Fill;
-            this.btnAlphaO.Location = new Point(363, 58);
-            this.btnAlphaO.Name = "btnAlphaO";
-            this.btnAlphaO.Size = new Size(54, 49);
-            this.btnAlphaO.TabIndex = 24;
-            this.btnAlphaO.Text = "O";
-            this.btnAlphaO.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaP
-            // 
-            this.btnAlphaP.Dock = DockStyle.Fill;
-            this.btnAlphaP.Location = new Point(423, 58);
-            this.btnAlphaP.Name = "btnAlphaP";
-            this.btnAlphaP.Size = new Size(54, 49);
-            this.btnAlphaP.TabIndex = 25;
-            this.btnAlphaP.Text = "P";
-            this.btnAlphaP.UseVisualStyleBackColor = true;
-            // 
-            // btnAlphaQ
-            // 
-            this.btnAlphaQ.Dock = DockStyle.Fill;
-            this.btnAlphaQ.Location = new Point(483, 58);
-            this.btnAlphaQ.Name = "btnAlphaQ";
-            this.btnAlphaQ.Size = new Size(55, 49);
-            this.btnAlphaQ.TabIndex = 26;
-            this.btnAlphaQ.Text = "Q";
-            this.btnAlphaQ.UseVisualStyleBackColor = true;
             // 
             // btnAlphaF
             // 
             btnAlphaF.Dock = DockStyle.Fill;
             btnAlphaF.Location = new Point(363, 3);
             btnAlphaF.Name = "btnAlphaF";
-            btnAlphaF.Size = new Size(54, 49);
+            btnAlphaF.Size = new Size(54, 54);
             btnAlphaF.TabIndex = 27;
             btnAlphaF.Text = "F";
             btnAlphaF.UseVisualStyleBackColor = true;
@@ -520,12 +501,23 @@
             // btnAlphaZ
             // 
             btnAlphaZ.Dock = DockStyle.Fill;
-            btnAlphaZ.Location = new Point(483, 113);
+            btnAlphaZ.Location = new Point(483, 123);
             btnAlphaZ.Name = "btnAlphaZ";
-            btnAlphaZ.Size = new Size(55, 49);
+            btnAlphaZ.Size = new Size(55, 54);
             btnAlphaZ.TabIndex = 28;
             btnAlphaZ.Text = "Z";
             btnAlphaZ.UseVisualStyleBackColor = true;
+            // 
+            // lblLetterGuess
+            // 
+            lblLetterGuess.AutoSize = true;
+            lblLetterGuess.BackColor = SystemColors.ScrollBar;
+            lblLetterGuess.Dock = DockStyle.Fill;
+            lblLetterGuess.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLetterGuess.Location = new Point(283, 185);
+            lblLetterGuess.Name = "lblLetterGuess";
+            lblLetterGuess.Size = new Size(541, 72);
+            lblLetterGuess.TabIndex = 4;
             // 
             // frmHangman
             // 
@@ -539,8 +531,8 @@
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
             tblMain.ResumeLayout(false);
+            tblMain.PerformLayout();
             panelWordDisplay.ResumeLayout(false);
-            panelLetterGuess.ResumeLayout(false);
             tblLetterDisplay.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -558,37 +550,35 @@
         private TableLayoutPanel tblMain;
         private FlowLayoutPanel panelGallows;
         private FlowLayoutPanel panelWordDisplay;
-        private FlowLayoutPanel panelLetterGuess;
         private Label lblWordDisplay;
         private Label lblWordGuess;
-        private Label lblLetterGuess;
         private TableLayoutPanel tblLetterDisplay;
-        private Button btnAlphaA;
-        private Button btnAlphaB;
-        private Button button27;
-        private Button button26;
-        private Button button25;
-        private Button btnAlpha;
+        private Button btnAlphaU;
+        private Button btnAlphaV;
+        private Button btnAlphaQ;
+        private Button btnAlphaP;
+        private Button btnAlphaO;
+        private Button btnAlphaN;
         private Button btnAlphaM;
         private Button btnAlphaL;
         private Button btnAlphaK;
         private Button btnAlphaJ;
         private Button btnAlphaI;
-        private Button button18;
+        private Button btnAlphaH;
         private Button btnAlphaG;
         private Button btnAlphaE;
         private Button btnAlphaD;
         private Button btnAlphaF;
         private Button btnAlphaZ;
-        private Button button11;
-        private Button button10;
-        private Button button9;
-        private Button button8;
-        private Button button7;
-        private Button button6;
-        private Button button5;
+        private Button btnAlphaS;
+        private Button btnAlphaT;
+        private Button btnAlphaR;
+        private Button btnAlphaY;
         private Button btnAlphaX;
+        private Button btnAlphaB;
+        private Button btnAlphaA;
+        private Button btnAlphaW;
         private Button btnAlphaC;
-        private Button btnAlphah;
+        private Label lblLetterGuess;
     }
 }

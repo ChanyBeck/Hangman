@@ -69,11 +69,11 @@
             btnAlphaF = new Button();
             btnAlphaZ = new Button();
             lblLetterGuess = new Label();
-            panelWordGuess = new FlowLayoutPanel();
+            tblWordDisplay = new TableLayoutPanel();
             Menu.SuspendLayout();
             tblMain.SuspendLayout();
-            panelWordDisplay.SuspendLayout();
             tblLetterDisplay.SuspendLayout();
+            tblWordDisplay.SuspendLayout();
             SuspendLayout();
             // 
             // Menu
@@ -148,8 +148,8 @@
             tblMain.ColumnCount = 2;
             tblMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.96227F));
             tblMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.037735F));
+            tblMain.Controls.Add(tblWordDisplay, 1, 0);
             tblMain.Controls.Add(panelGallows, 0, 0);
-            tblMain.Controls.Add(panelWordDisplay, 1, 0);
             tblMain.Controls.Add(tblLetterDisplay, 1, 2);
             tblMain.Controls.Add(lblLetterGuess, 1, 1);
             tblMain.Dock = DockStyle.Fill;
@@ -173,21 +173,19 @@
             // 
             // panelWordDisplay
             // 
-            panelWordDisplay.Controls.Add(lblWordDisplay);
-            panelWordDisplay.Controls.Add(panelWordGuess);
             panelWordDisplay.Dock = DockStyle.Fill;
-            panelWordDisplay.Location = new Point(283, 3);
+            panelWordDisplay.Location = new Point(3, 44);
             panelWordDisplay.Name = "panelWordDisplay";
-            panelWordDisplay.Size = new Size(541, 179);
+            panelWordDisplay.Size = new Size(535, 132);
             panelWordDisplay.TabIndex = 1;
             // 
             // lblWordDisplay
             // 
-            lblWordDisplay.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblWordDisplay.BackColor = SystemColors.ScrollBar;
+            lblWordDisplay.Dock = DockStyle.Fill;
             lblWordDisplay.Location = new Point(3, 0);
             lblWordDisplay.Name = "lblWordDisplay";
-            lblWordDisplay.Size = new Size(535, 35);
+            lblWordDisplay.Size = new Size(535, 41);
             lblWordDisplay.TabIndex = 0;
             lblWordDisplay.Text = "Word";
             lblWordDisplay.TextAlign = ContentAlignment.MiddleCenter;
@@ -512,13 +510,21 @@
             lblLetterGuess.Size = new Size(541, 72);
             lblLetterGuess.TabIndex = 4;
             // 
-            // panelWordGuess
+            // tblWordDisplay
             // 
-            panelWordGuess.Dock = DockStyle.Bottom;
-            panelWordGuess.Location = new Point(3, 38);
-            panelWordGuess.Name = "panelWordGuess";
-            panelWordGuess.Size = new Size(200, 100);
-            panelWordGuess.TabIndex = 1;
+            tblWordDisplay.ColumnCount = 1;
+            tblWordDisplay.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblWordDisplay.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tblWordDisplay.Controls.Add(lblWordDisplay, 0, 0);
+            tblWordDisplay.Controls.Add(panelWordDisplay, 0, 1);
+            tblWordDisplay.Dock = DockStyle.Fill;
+            tblWordDisplay.Location = new Point(283, 3);
+            tblWordDisplay.Name = "tblWordDisplay";
+            tblWordDisplay.RowCount = 2;
+            tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 23.0769234F));
+            tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 76.92308F));
+            tblWordDisplay.Size = new Size(541, 179);
+            tblWordDisplay.TabIndex = 0;
             // 
             // frmHangman
             // 
@@ -533,8 +539,8 @@
             Menu.PerformLayout();
             tblMain.ResumeLayout(false);
             tblMain.PerformLayout();
-            panelWordDisplay.ResumeLayout(false);
             tblLetterDisplay.ResumeLayout(false);
+            tblWordDisplay.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -580,6 +586,6 @@
         private Button btnAlphaW;
         private Button btnAlphaC;
         private Label lblLetterGuess;
-        private FlowLayoutPanel panelWordGuess;
+        private TableLayoutPanel tblWordDisplay;
     }
 }

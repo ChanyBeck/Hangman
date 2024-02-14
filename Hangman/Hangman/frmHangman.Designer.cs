@@ -38,9 +38,10 @@
             toolStripSeparator3 = new ToolStripSeparator();
             lblScore = new ToolStripLabel();
             tblMain = new TableLayoutPanel();
-            panelGallows = new FlowLayoutPanel();
-            panelWordDisplay = new FlowLayoutPanel();
+            tblWordDisplay = new TableLayoutPanel();
             lblWordDisplay = new Label();
+            panelWordDisplay = new FlowLayoutPanel();
+            panelGallows = new FlowLayoutPanel();
             tblLetterDisplay = new TableLayoutPanel();
             btnAlphaQ = new Button();
             btnAlphaP = new Button();
@@ -69,11 +70,10 @@
             btnAlphaF = new Button();
             btnAlphaZ = new Button();
             lblLetterGuess = new Label();
-            tblWordDisplay = new TableLayoutPanel();
             Menu.SuspendLayout();
             tblMain.SuspendLayout();
-            tblLetterDisplay.SuspendLayout();
             tblWordDisplay.SuspendLayout();
+            tblLetterDisplay.SuspendLayout();
             SuspendLayout();
             // 
             // Menu
@@ -162,6 +162,42 @@
             tblMain.Size = new Size(827, 443);
             tblMain.TabIndex = 1;
             // 
+            // tblWordDisplay
+            // 
+            tblWordDisplay.ColumnCount = 1;
+            tblWordDisplay.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblWordDisplay.Controls.Add(lblWordDisplay, 0, 0);
+            tblWordDisplay.Controls.Add(panelWordDisplay, 0, 2);
+            tblWordDisplay.Dock = DockStyle.Fill;
+            tblWordDisplay.Location = new Point(283, 3);
+            tblWordDisplay.Name = "tblWordDisplay";
+            tblWordDisplay.RowCount = 3;
+            tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 21.0491314F));
+            tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 46.16038F));
+            tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 32.7904854F));
+            tblWordDisplay.Size = new Size(541, 179);
+            tblWordDisplay.TabIndex = 0;
+            // 
+            // lblWordDisplay
+            // 
+            lblWordDisplay.BackColor = SystemColors.ScrollBar;
+            lblWordDisplay.Dock = DockStyle.Fill;
+            lblWordDisplay.Location = new Point(3, 0);
+            lblWordDisplay.Name = "lblWordDisplay";
+            lblWordDisplay.Size = new Size(535, 37);
+            lblWordDisplay.TabIndex = 0;
+            lblWordDisplay.Text = "Word";
+            lblWordDisplay.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panelWordDisplay
+            // 
+            panelWordDisplay.Dock = DockStyle.Fill;
+            panelWordDisplay.Font = new Font("Swis721 Blk BT", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            panelWordDisplay.Location = new Point(3, 122);
+            panelWordDisplay.Name = "panelWordDisplay";
+            panelWordDisplay.Size = new Size(535, 54);
+            panelWordDisplay.TabIndex = 1;
+            // 
             // panelGallows
             // 
             panelGallows.Dock = DockStyle.Fill;
@@ -170,25 +206,6 @@
             tblMain.SetRowSpan(panelGallows, 3);
             panelGallows.Size = new Size(274, 437);
             panelGallows.TabIndex = 0;
-            // 
-            // panelWordDisplay
-            // 
-            panelWordDisplay.Dock = DockStyle.Fill;
-            panelWordDisplay.Location = new Point(3, 44);
-            panelWordDisplay.Name = "panelWordDisplay";
-            panelWordDisplay.Size = new Size(535, 132);
-            panelWordDisplay.TabIndex = 1;
-            // 
-            // lblWordDisplay
-            // 
-            lblWordDisplay.BackColor = SystemColors.ScrollBar;
-            lblWordDisplay.Dock = DockStyle.Fill;
-            lblWordDisplay.Location = new Point(3, 0);
-            lblWordDisplay.Name = "lblWordDisplay";
-            lblWordDisplay.Size = new Size(535, 41);
-            lblWordDisplay.TabIndex = 0;
-            lblWordDisplay.Text = "Word";
-            lblWordDisplay.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tblLetterDisplay
             // 
@@ -510,22 +527,6 @@
             lblLetterGuess.Size = new Size(541, 72);
             lblLetterGuess.TabIndex = 4;
             // 
-            // tblWordDisplay
-            // 
-            tblWordDisplay.ColumnCount = 1;
-            tblWordDisplay.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tblWordDisplay.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tblWordDisplay.Controls.Add(lblWordDisplay, 0, 0);
-            tblWordDisplay.Controls.Add(panelWordDisplay, 0, 1);
-            tblWordDisplay.Dock = DockStyle.Fill;
-            tblWordDisplay.Location = new Point(283, 3);
-            tblWordDisplay.Name = "tblWordDisplay";
-            tblWordDisplay.RowCount = 2;
-            tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 23.0769234F));
-            tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 76.92308F));
-            tblWordDisplay.Size = new Size(541, 179);
-            tblWordDisplay.TabIndex = 0;
-            // 
             // frmHangman
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -539,8 +540,8 @@
             Menu.PerformLayout();
             tblMain.ResumeLayout(false);
             tblMain.PerformLayout();
-            tblLetterDisplay.ResumeLayout(false);
             tblWordDisplay.ResumeLayout(false);
+            tblLetterDisplay.ResumeLayout(false);
             ResumeLayout(false);
         }
 

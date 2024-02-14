@@ -19,8 +19,10 @@ namespace Hangman
     {
         List<Word> lstword = gnuciDictionary.EnglishDictionary.GetAllWords().ToList();
         List<Button> lstbuttonalpha = new();
-        char[] charword;
+        //List<char> charword = new();
         Random rnd = new();
+        int correctletters;
+
         public frmHangman()
         {
             InitializeComponent();
@@ -28,11 +30,16 @@ namespace Hangman
             btnNewWord.Click += BtnNewWord_Click;
             //char[] charword = lstword[rnd.Next(0, lstword.Count)].Value.ToString().ToArray();
             lstbuttonalpha.AddRange(from Button b in tblLetterDisplay.Controls select b);
-            foreach (Button b in tblLetterDisplay.Controls)
-            {
-                b.Click += BtnAlpha_Click;
-            }
+            lstbuttonalpha.ForEach(b => b.Click += BtnAlpha_Click);
+            lblGameStatus.Text = "Click Start To Begin";
         }
+        private void StartGame()
+        {
+            GetNewWord();
+            lstbuttonalpha.ForEach(b => EnableButton(b));
+            lblGameStatus.Text = "Guess A Letter";
+        }
+
         private void EnableButton(Button btn, bool b = true)
         {
             switch (b)
@@ -72,9 +79,11 @@ namespace Hangman
                     if (lbl.Name == charguessed)
                     {
                         lbl.Text = charguessed;
+                        correctletters++;
                     }
                 }
             }
+            
         }
         private void BtnAlpha_Click(object? sender, EventArgs e)
         {
@@ -85,14 +94,12 @@ namespace Hangman
 
         private void BtnNewWord_Click(object? sender, EventArgs e)
         {
-            GetNewWord();
-            lstbuttonalpha.ForEach(b => EnableButton(b));
+            StartGame();
         }
 
         private void BtnStart_Click(object? sender, EventArgs e)
         {
-            GetNewWord();
-            lstbuttonalpha.ForEach(b => EnableButton(b));
+            StartGame();
         }
     }
 }

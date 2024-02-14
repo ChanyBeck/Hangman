@@ -41,7 +41,6 @@
             panelGallows = new FlowLayoutPanel();
             panelWordDisplay = new FlowLayoutPanel();
             lblWordDisplay = new Label();
-            lblWordGuess = new Label();
             tblLetterDisplay = new TableLayoutPanel();
             btnAlphaQ = new Button();
             btnAlphaP = new Button();
@@ -70,6 +69,7 @@
             btnAlphaF = new Button();
             btnAlphaZ = new Button();
             lblLetterGuess = new Label();
+            panelWordGuess = new FlowLayoutPanel();
             Menu.SuspendLayout();
             tblMain.SuspendLayout();
             panelWordDisplay.SuspendLayout();
@@ -80,6 +80,7 @@
             // 
             Menu.AutoSize = false;
             Menu.BackColor = SystemColors.ControlLight;
+            Menu.ImageScalingSize = new Size(20, 20);
             Menu.Items.AddRange(new ToolStripItem[] { btnStart, toolStripSeparator1, btnNewWord, toolStripSeparator2, lblGameStatus, toolStripSeparator3, lblScore });
             Menu.Location = new Point(0, 0);
             Menu.Name = "Menu";
@@ -173,7 +174,7 @@
             // panelWordDisplay
             // 
             panelWordDisplay.Controls.Add(lblWordDisplay);
-            panelWordDisplay.Controls.Add(lblWordGuess);
+            panelWordDisplay.Controls.Add(panelWordGuess);
             panelWordDisplay.Dock = DockStyle.Fill;
             panelWordDisplay.Location = new Point(283, 3);
             panelWordDisplay.Name = "panelWordDisplay";
@@ -190,14 +191,6 @@
             lblWordDisplay.TabIndex = 0;
             lblWordDisplay.Text = "Word";
             lblWordDisplay.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblWordGuess
-            // 
-            lblWordGuess.Font = new Font("Webdings", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            lblWordGuess.Location = new Point(3, 35);
-            lblWordGuess.Name = "lblWordGuess";
-            lblWordGuess.Size = new Size(535, 129);
-            lblWordGuess.TabIndex = 1;
             // 
             // tblLetterDisplay
             // 
@@ -519,6 +512,14 @@
             lblLetterGuess.Size = new Size(541, 72);
             lblLetterGuess.TabIndex = 4;
             // 
+            // panelWordGuess
+            // 
+            panelWordGuess.Dock = DockStyle.Bottom;
+            panelWordGuess.Location = new Point(3, 38);
+            panelWordGuess.Name = "panelWordGuess";
+            panelWordGuess.Size = new Size(200, 100);
+            panelWordGuess.TabIndex = 1;
+            // 
             // frmHangman
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -551,7 +552,6 @@
         private FlowLayoutPanel panelGallows;
         private FlowLayoutPanel panelWordDisplay;
         private Label lblWordDisplay;
-        private Label lblWordGuess;
         private TableLayoutPanel tblLetterDisplay;
         private Button btnAlphaU;
         private Button btnAlphaV;
@@ -580,5 +580,6 @@
         private Button btnAlphaW;
         private Button btnAlphaC;
         private Label lblLetterGuess;
+        private FlowLayoutPanel panelWordGuess;
     }
 }

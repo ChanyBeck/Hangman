@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using gnuciDictionary;
-using System.Diagnostics.CodeAnalysis;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+﻿using gnuciDictionary;
 using Button = System.Windows.Forms.Button;
 
 namespace Hangman
@@ -19,27 +7,25 @@ namespace Hangman
     {
         List<Word> lstword = gnuciDictionary.EnglishDictionary.GetAllWords().ToList();
         List<Button> lstbuttonalpha = new();
-        //List<char> charword = new();
-        Random rnd = new();
-        int correctletters;
+        string path = Application.StartupPath + @"\images\gallows pic ";
+        string word = "";
+        int lettersguessed = 0;
+        int guessesused = 1;
+        int score = 0;
 
         public frmHangman()
         {
             InitializeComponent();
-            btnStart.Click += BtnStart_Click;
-            btnNewWord.Click += BtnNewWord_Click;
-            //char[] charword = lstword[rnd.Next(0, lstword.Count)].Value.ToString().ToArray();
+            btnStart.Click += BtnStart_NewWord_Click;
+            btnNewWord.Click += BtnStart_NewWord_Click;
             lstbuttonalpha.AddRange(from Button b in tblLetterDisplay.Controls select b);
             lstbuttonalpha.ForEach(b => b.Click += BtnAlpha_Click);
+            lstbuttonalpha.ForEach(b => EnableButton(b, false));
+            btnNewWord.Enabled = false;
             lblGameStatus.Text = "Click Start To Begin";
+            picGallows.ImageLocation = path + guessesused + ".PNG";
+            lblScore.Text = "Score: " + score;
         }
-        private void StartGame()
-        {
-            GetNewWord();
-            lstbuttonalpha.ForEach(b => EnableButton(b));
-            lblGameStatus.Text = "Guess A Letter";
-        }
-
         private void EnableButton(Button btn, bool b = true)
         {
             switch (b)
@@ -50,17 +36,30 @@ namespace Hangman
                     btn.BackColor = Color.White;
                     break;
                 case false:
-                    lblLetterGuess.Text += btn.Text;
                     btn.Enabled = false;
                     btn.BackColor = Color.Gray;
                     break;
             }
         }
 
+        private void StartGame()
+        {
+            btnStart.Enabled = false;
+            panelWordDisplay.Controls.Clear();
+            GetNewWord();
+            lettersguessed = 0;
+            guessesused = 1;
+            lstbuttonalpha.ForEach(b => EnableButton(b));
+            btnNewWord.Enabled = true;
+            lblGameStatus.Text = "Guess A Letter";
+            lblWordDisplay.Text = "";
+            picGallows.ImageLocation = path + guessesused + ".PNG";
+}
         private void GetNewWord()
         {
-            panelWordDisplay.Controls.Clear();
-            char[] charword = lstword[rnd.Next(0, lstword.Count)].Value.ToString().ToArray();
+            Random rnd = new();
+            word = lstword[rnd.Next(0, lstword.Count)].Value.ToString().ToLower();
+            char[] charword = word.ToCharArray();
             foreach (char c in charword)
             {
                 Label lbl = new();
@@ -72,32 +71,58 @@ namespace Hangman
         }
         private void LoopWord(string charguessed)
         {
-            foreach(Label lbl in panelWordDisplay.Controls)
+            foreach (Label lbl in panelWordDisplay.Controls)
             {
                 if (lbl.Text == "_ ")
                 {
                     if (lbl.Name == charguessed)
                     {
                         lbl.Text = charguessed;
-                        correctletters++;
+                        lettersguessed++;
                     }
                 }
             }
+            if (!word.Contains(charguessed))
+            {
+                guessesused++;
+                picGallows.ImageLocation = path + guessesused + ".png";
+            }
+            if (lettersguessed == word.Length) PlayerWins_Loses("win");
+            if (guessesused == 8) PlayerWins_Loses("lose");
+        }
+        private void PlayerWins_Loses(string gamestatus)
+        {
+            switch (gamestatus)
+            {
+                case "win":
+                    score++;
+                    lblGameStatus.Text = "You Win!!";
+                    break;
+                case "lose":
+                    score--;
+                    lblGameStatus.Text = "You Lose";
+                    break;
+            }
             
+            lblScore.Text = "Score: " + score;
+            lstbuttonalpha.ForEach(b => EnableButton(b, false));
+            btnNewWord.Enabled = false;
+            btnStart.Enabled = true;
+            lblWordDisplay.Text = word;
         }
         private void BtnAlpha_Click(object? sender, EventArgs e)
         {
-            Button b = sender as Button;
+            Button b = new();
+            if (sender != null)
+            {
+                b = sender as Button;
+            }
+            lblLetterGuess.Text += b.Text;
             EnableButton(b, false);
             LoopWord(b.Text.ToLower());
         }
 
-        private void BtnNewWord_Click(object? sender, EventArgs e)
-        {
-            StartGame();
-        }
-
-        private void BtnStart_Click(object? sender, EventArgs e)
+        private void BtnStart_NewWord_Click(object? sender, EventArgs e)
         {
             StartGame();
         }

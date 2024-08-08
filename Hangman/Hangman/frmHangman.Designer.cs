@@ -85,7 +85,7 @@
             Menu.Items.AddRange(new ToolStripItem[] { btnStart, toolStripSeparator1, btnNewWord, toolStripSeparator2, lblGameStatus, toolStripSeparator3, lblScore });
             Menu.Location = new Point(0, 0);
             Menu.Name = "Menu";
-            Menu.Size = new Size(945, 65);
+            Menu.Size = new Size(827, 49);
             Menu.TabIndex = 0;
             Menu.Text = "toolStrip1";
             // 
@@ -103,7 +103,7 @@
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 65);
+            toolStripSeparator1.Size = new Size(6, 49);
             // 
             // btnNewWord
             // 
@@ -119,7 +119,7 @@
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 65);
+            toolStripSeparator2.Size = new Size(6, 49);
             // 
             // lblGameStatus
             // 
@@ -134,7 +134,7 @@
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 65);
+            toolStripSeparator3.Size = new Size(6, 49);
             // 
             // lblScore
             // 
@@ -154,14 +154,13 @@
             tblMain.Controls.Add(lblLetterGuess, 1, 1);
             tblMain.Controls.Add(picGallows, 0, 0);
             tblMain.Dock = DockStyle.Fill;
-            tblMain.Location = new Point(0, 65);
-            tblMain.Margin = new Padding(3, 4, 3, 4);
+            tblMain.Location = new Point(0, 49);
             tblMain.Name = "tblMain";
             tblMain.RowCount = 3;
             tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 41.827877F));
             tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 16.3442421F));
             tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 41.827877F));
-            tblMain.Size = new Size(945, 591);
+            tblMain.Size = new Size(827, 443);
             tblMain.TabIndex = 1;
             // 
             // tblWordDisplay
@@ -171,14 +170,13 @@
             tblWordDisplay.Controls.Add(lblWordDisplay, 0, 0);
             tblWordDisplay.Controls.Add(panelWordDisplay, 0, 2);
             tblWordDisplay.Dock = DockStyle.Fill;
-            tblWordDisplay.Location = new Point(323, 4);
-            tblWordDisplay.Margin = new Padding(3, 4, 3, 4);
+            tblWordDisplay.Location = new Point(283, 3);
             tblWordDisplay.Name = "tblWordDisplay";
             tblWordDisplay.RowCount = 3;
             tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 21.0491314F));
             tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 46.16038F));
             tblWordDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 32.7904854F));
-            tblWordDisplay.Size = new Size(619, 239);
+            tblWordDisplay.Size = new Size(541, 179);
             tblWordDisplay.TabIndex = 0;
             // 
             // lblWordDisplay
@@ -187,7 +185,7 @@
             lblWordDisplay.Dock = DockStyle.Fill;
             lblWordDisplay.Location = new Point(3, 0);
             lblWordDisplay.Name = "lblWordDisplay";
-            lblWordDisplay.Size = new Size(613, 50);
+            lblWordDisplay.Size = new Size(535, 37);
             lblWordDisplay.TabIndex = 0;
             lblWordDisplay.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -195,10 +193,9 @@
             // 
             panelWordDisplay.Dock = DockStyle.Fill;
             panelWordDisplay.Font = new Font("Swis721 Blk BT", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            panelWordDisplay.Location = new Point(3, 164);
-            panelWordDisplay.Margin = new Padding(3, 4, 3, 4);
+            panelWordDisplay.Location = new Point(3, 122);
             panelWordDisplay.Name = "panelWordDisplay";
-            panelWordDisplay.Size = new Size(613, 71);
+            panelWordDisplay.Size = new Size(535, 54);
             panelWordDisplay.TabIndex = 1;
             // 
             // tblLetterDisplay
@@ -240,24 +237,22 @@
             tblLetterDisplay.Controls.Add(btnAlphaF, 6, 0);
             tblLetterDisplay.Controls.Add(btnAlphaZ, 8, 2);
             tblLetterDisplay.Dock = DockStyle.Fill;
-            tblLetterDisplay.Location = new Point(323, 347);
-            tblLetterDisplay.Margin = new Padding(3, 4, 3, 4);
+            tblLetterDisplay.Location = new Point(283, 260);
             tblLetterDisplay.Name = "tblLetterDisplay";
             tblLetterDisplay.RowCount = 3;
             tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
-            tblLetterDisplay.Size = new Size(619, 240);
+            tblLetterDisplay.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblLetterDisplay.Size = new Size(541, 180);
             tblLetterDisplay.TabIndex = 2;
             // 
             // btnAlphaQ
             // 
             btnAlphaQ.Dock = DockStyle.Fill;
-            btnAlphaQ.Location = new Point(547, 83);
-            btnAlphaQ.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaQ.Location = new Point(483, 63);
             btnAlphaQ.Name = "btnAlphaQ";
-            btnAlphaQ.Size = new Size(69, 71);
+            btnAlphaQ.Size = new Size(55, 54);
             btnAlphaQ.TabIndex = 16;
             btnAlphaQ.Text = "Q";
             btnAlphaQ.UseVisualStyleBackColor = true;
@@ -265,10 +260,9 @@
             // btnAlphaP
             // 
             btnAlphaP.Dock = DockStyle.Fill;
-            btnAlphaP.Location = new Point(479, 83);
-            btnAlphaP.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaP.Location = new Point(423, 63);
             btnAlphaP.Name = "btnAlphaP";
-            btnAlphaP.Size = new Size(62, 71);
+            btnAlphaP.Size = new Size(54, 54);
             btnAlphaP.TabIndex = 15;
             btnAlphaP.Text = "P";
             btnAlphaP.UseVisualStyleBackColor = true;
@@ -276,10 +270,9 @@
             // btnAlphaO
             // 
             btnAlphaO.Dock = DockStyle.Fill;
-            btnAlphaO.Location = new Point(411, 83);
-            btnAlphaO.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaO.Location = new Point(363, 63);
             btnAlphaO.Name = "btnAlphaO";
-            btnAlphaO.Size = new Size(62, 71);
+            btnAlphaO.Size = new Size(54, 54);
             btnAlphaO.TabIndex = 14;
             btnAlphaO.Text = "O";
             btnAlphaO.UseVisualStyleBackColor = true;
@@ -287,10 +280,9 @@
             // btnAlphaN
             // 
             btnAlphaN.Dock = DockStyle.Fill;
-            btnAlphaN.Location = new Point(343, 83);
-            btnAlphaN.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaN.Location = new Point(303, 63);
             btnAlphaN.Name = "btnAlphaN";
-            btnAlphaN.Size = new Size(62, 71);
+            btnAlphaN.Size = new Size(54, 54);
             btnAlphaN.TabIndex = 13;
             btnAlphaN.Text = "N";
             btnAlphaN.UseVisualStyleBackColor = true;
@@ -298,10 +290,9 @@
             // btnAlphaM
             // 
             btnAlphaM.Dock = DockStyle.Fill;
-            btnAlphaM.Location = new Point(275, 83);
-            btnAlphaM.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaM.Location = new Point(243, 63);
             btnAlphaM.Name = "btnAlphaM";
-            btnAlphaM.Size = new Size(62, 71);
+            btnAlphaM.Size = new Size(54, 54);
             btnAlphaM.TabIndex = 12;
             btnAlphaM.Text = "M";
             btnAlphaM.UseVisualStyleBackColor = true;
@@ -309,10 +300,9 @@
             // btnAlphaL
             // 
             btnAlphaL.Dock = DockStyle.Fill;
-            btnAlphaL.Location = new Point(207, 83);
-            btnAlphaL.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaL.Location = new Point(183, 63);
             btnAlphaL.Name = "btnAlphaL";
-            btnAlphaL.Size = new Size(62, 71);
+            btnAlphaL.Size = new Size(54, 54);
             btnAlphaL.TabIndex = 11;
             btnAlphaL.Text = "L";
             btnAlphaL.UseVisualStyleBackColor = true;
@@ -320,10 +310,9 @@
             // btnAlphaK
             // 
             btnAlphaK.Dock = DockStyle.Fill;
-            btnAlphaK.Location = new Point(139, 83);
-            btnAlphaK.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaK.Location = new Point(123, 63);
             btnAlphaK.Name = "btnAlphaK";
-            btnAlphaK.Size = new Size(62, 71);
+            btnAlphaK.Size = new Size(54, 54);
             btnAlphaK.TabIndex = 10;
             btnAlphaK.Text = "K";
             btnAlphaK.UseVisualStyleBackColor = true;
@@ -331,10 +320,9 @@
             // btnAlphaJ
             // 
             btnAlphaJ.Dock = DockStyle.Fill;
-            btnAlphaJ.Location = new Point(71, 83);
-            btnAlphaJ.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaJ.Location = new Point(63, 63);
             btnAlphaJ.Name = "btnAlphaJ";
-            btnAlphaJ.Size = new Size(62, 71);
+            btnAlphaJ.Size = new Size(54, 54);
             btnAlphaJ.TabIndex = 9;
             btnAlphaJ.Text = "J";
             btnAlphaJ.UseVisualStyleBackColor = true;
@@ -342,10 +330,9 @@
             // btnAlphaI
             // 
             btnAlphaI.Dock = DockStyle.Fill;
-            btnAlphaI.Location = new Point(3, 83);
-            btnAlphaI.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaI.Location = new Point(3, 63);
             btnAlphaI.Name = "btnAlphaI";
-            btnAlphaI.Size = new Size(62, 71);
+            btnAlphaI.Size = new Size(54, 54);
             btnAlphaI.TabIndex = 8;
             btnAlphaI.Text = "I";
             btnAlphaI.UseVisualStyleBackColor = true;
@@ -353,10 +340,9 @@
             // btnAlphaH
             // 
             btnAlphaH.Dock = DockStyle.Fill;
-            btnAlphaH.Location = new Point(547, 4);
-            btnAlphaH.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaH.Location = new Point(483, 3);
             btnAlphaH.Name = "btnAlphaH";
-            btnAlphaH.Size = new Size(69, 71);
+            btnAlphaH.Size = new Size(55, 54);
             btnAlphaH.TabIndex = 7;
             btnAlphaH.Text = "H";
             btnAlphaH.UseVisualStyleBackColor = true;
@@ -364,10 +350,9 @@
             // btnAlphaE
             // 
             btnAlphaE.Dock = DockStyle.Fill;
-            btnAlphaE.Location = new Point(343, 4);
-            btnAlphaE.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaE.Location = new Point(303, 3);
             btnAlphaE.Name = "btnAlphaE";
-            btnAlphaE.Size = new Size(62, 71);
+            btnAlphaE.Size = new Size(54, 54);
             btnAlphaE.TabIndex = 4;
             btnAlphaE.Text = "E";
             btnAlphaE.UseVisualStyleBackColor = true;
@@ -375,10 +360,9 @@
             // btnAlphaD
             // 
             btnAlphaD.Dock = DockStyle.Fill;
-            btnAlphaD.Location = new Point(275, 4);
-            btnAlphaD.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaD.Location = new Point(243, 3);
             btnAlphaD.Name = "btnAlphaD";
-            btnAlphaD.Size = new Size(62, 71);
+            btnAlphaD.Size = new Size(54, 54);
             btnAlphaD.TabIndex = 3;
             btnAlphaD.Text = "D";
             btnAlphaD.UseVisualStyleBackColor = true;
@@ -386,10 +370,9 @@
             // btnAlphaV
             // 
             btnAlphaV.Dock = DockStyle.Fill;
-            btnAlphaV.Location = new Point(275, 162);
-            btnAlphaV.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaV.Location = new Point(243, 123);
             btnAlphaV.Name = "btnAlphaV";
-            btnAlphaV.Size = new Size(62, 74);
+            btnAlphaV.Size = new Size(54, 54);
             btnAlphaV.TabIndex = 21;
             btnAlphaV.Text = "V";
             btnAlphaV.UseVisualStyleBackColor = true;
@@ -397,10 +380,9 @@
             // btnAlphaU
             // 
             btnAlphaU.Dock = DockStyle.Fill;
-            btnAlphaU.Location = new Point(207, 162);
-            btnAlphaU.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaU.Location = new Point(183, 123);
             btnAlphaU.Name = "btnAlphaU";
-            btnAlphaU.Size = new Size(62, 74);
+            btnAlphaU.Size = new Size(54, 54);
             btnAlphaU.TabIndex = 20;
             btnAlphaU.Text = "U";
             btnAlphaU.UseVisualStyleBackColor = true;
@@ -408,10 +390,9 @@
             // btnAlphaT
             // 
             btnAlphaT.Dock = DockStyle.Fill;
-            btnAlphaT.Location = new Point(139, 162);
-            btnAlphaT.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaT.Location = new Point(123, 123);
             btnAlphaT.Name = "btnAlphaT";
-            btnAlphaT.Size = new Size(62, 74);
+            btnAlphaT.Size = new Size(54, 54);
             btnAlphaT.TabIndex = 19;
             btnAlphaT.Text = "T";
             btnAlphaT.UseVisualStyleBackColor = true;
@@ -419,10 +400,9 @@
             // btnAlphaY
             // 
             btnAlphaY.Dock = DockStyle.Fill;
-            btnAlphaY.Location = new Point(479, 162);
-            btnAlphaY.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaY.Location = new Point(423, 123);
             btnAlphaY.Name = "btnAlphaY";
-            btnAlphaY.Size = new Size(62, 74);
+            btnAlphaY.Size = new Size(54, 54);
             btnAlphaY.TabIndex = 24;
             btnAlphaY.Text = "Y";
             btnAlphaY.UseVisualStyleBackColor = true;
@@ -430,10 +410,9 @@
             // btnAlphaX
             // 
             btnAlphaX.Dock = DockStyle.Fill;
-            btnAlphaX.Location = new Point(411, 162);
-            btnAlphaX.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaX.Location = new Point(363, 123);
             btnAlphaX.Name = "btnAlphaX";
-            btnAlphaX.Size = new Size(62, 74);
+            btnAlphaX.Size = new Size(54, 54);
             btnAlphaX.TabIndex = 23;
             btnAlphaX.Text = "X";
             btnAlphaX.UseVisualStyleBackColor = true;
@@ -441,10 +420,9 @@
             // btnAlphaW
             // 
             btnAlphaW.Dock = DockStyle.Fill;
-            btnAlphaW.Location = new Point(343, 162);
-            btnAlphaW.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaW.Location = new Point(303, 123);
             btnAlphaW.Name = "btnAlphaW";
-            btnAlphaW.Size = new Size(62, 74);
+            btnAlphaW.Size = new Size(54, 54);
             btnAlphaW.TabIndex = 22;
             btnAlphaW.Text = "W";
             btnAlphaW.UseVisualStyleBackColor = true;
@@ -452,10 +430,9 @@
             // btnAlphaS
             // 
             btnAlphaS.Dock = DockStyle.Fill;
-            btnAlphaS.Location = new Point(71, 162);
-            btnAlphaS.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaS.Location = new Point(63, 123);
             btnAlphaS.Name = "btnAlphaS";
-            btnAlphaS.Size = new Size(62, 74);
+            btnAlphaS.Size = new Size(54, 54);
             btnAlphaS.TabIndex = 18;
             btnAlphaS.Text = "S";
             btnAlphaS.UseVisualStyleBackColor = true;
@@ -463,10 +440,9 @@
             // btnAlphaR
             // 
             btnAlphaR.Dock = DockStyle.Fill;
-            btnAlphaR.Location = new Point(3, 162);
-            btnAlphaR.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaR.Location = new Point(3, 123);
             btnAlphaR.Name = "btnAlphaR";
-            btnAlphaR.Size = new Size(62, 74);
+            btnAlphaR.Size = new Size(54, 54);
             btnAlphaR.TabIndex = 17;
             btnAlphaR.Text = "R";
             btnAlphaR.UseVisualStyleBackColor = true;
@@ -474,10 +450,9 @@
             // btnAlphaB
             // 
             btnAlphaB.Dock = DockStyle.Fill;
-            btnAlphaB.Location = new Point(139, 4);
-            btnAlphaB.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaB.Location = new Point(123, 3);
             btnAlphaB.Name = "btnAlphaB";
-            btnAlphaB.Size = new Size(62, 71);
+            btnAlphaB.Size = new Size(54, 54);
             btnAlphaB.TabIndex = 1;
             btnAlphaB.Text = "B";
             btnAlphaB.UseVisualStyleBackColor = true;
@@ -485,10 +460,9 @@
             // btnAlphaA
             // 
             btnAlphaA.Dock = DockStyle.Fill;
-            btnAlphaA.Location = new Point(71, 4);
-            btnAlphaA.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaA.Location = new Point(63, 3);
             btnAlphaA.Name = "btnAlphaA";
-            btnAlphaA.Size = new Size(62, 71);
+            btnAlphaA.Size = new Size(54, 54);
             btnAlphaA.TabIndex = 0;
             btnAlphaA.Text = "A";
             btnAlphaA.UseVisualStyleBackColor = true;
@@ -496,10 +470,9 @@
             // btnAlphaC
             // 
             btnAlphaC.Dock = DockStyle.Fill;
-            btnAlphaC.Location = new Point(207, 4);
-            btnAlphaC.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaC.Location = new Point(183, 3);
             btnAlphaC.Name = "btnAlphaC";
-            btnAlphaC.Size = new Size(62, 71);
+            btnAlphaC.Size = new Size(54, 54);
             btnAlphaC.TabIndex = 2;
             btnAlphaC.Text = "C";
             btnAlphaC.UseVisualStyleBackColor = true;
@@ -507,10 +480,9 @@
             // btnAlphaG
             // 
             btnAlphaG.Dock = DockStyle.Fill;
-            btnAlphaG.Location = new Point(479, 4);
-            btnAlphaG.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaG.Location = new Point(423, 3);
             btnAlphaG.Name = "btnAlphaG";
-            btnAlphaG.Size = new Size(62, 71);
+            btnAlphaG.Size = new Size(54, 54);
             btnAlphaG.TabIndex = 6;
             btnAlphaG.Text = "G";
             btnAlphaG.UseVisualStyleBackColor = true;
@@ -518,10 +490,9 @@
             // btnAlphaF
             // 
             btnAlphaF.Dock = DockStyle.Fill;
-            btnAlphaF.Location = new Point(411, 4);
-            btnAlphaF.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaF.Location = new Point(363, 3);
             btnAlphaF.Name = "btnAlphaF";
-            btnAlphaF.Size = new Size(62, 71);
+            btnAlphaF.Size = new Size(54, 54);
             btnAlphaF.TabIndex = 5;
             btnAlphaF.Text = "F";
             btnAlphaF.UseVisualStyleBackColor = true;
@@ -529,10 +500,9 @@
             // btnAlphaZ
             // 
             btnAlphaZ.Dock = DockStyle.Fill;
-            btnAlphaZ.Location = new Point(547, 162);
-            btnAlphaZ.Margin = new Padding(3, 4, 3, 4);
+            btnAlphaZ.Location = new Point(483, 123);
             btnAlphaZ.Name = "btnAlphaZ";
-            btnAlphaZ.Size = new Size(69, 74);
+            btnAlphaZ.Size = new Size(55, 54);
             btnAlphaZ.TabIndex = 25;
             btnAlphaZ.Text = "Z";
             btnAlphaZ.UseVisualStyleBackColor = true;
@@ -542,32 +512,30 @@
             lblLetterGuess.AutoSize = true;
             lblLetterGuess.BackColor = SystemColors.ScrollBar;
             lblLetterGuess.Dock = DockStyle.Fill;
-            lblLetterGuess.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLetterGuess.Location = new Point(323, 247);
+            lblLetterGuess.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLetterGuess.Location = new Point(283, 185);
             lblLetterGuess.Name = "lblLetterGuess";
-            lblLetterGuess.Size = new Size(619, 96);
+            lblLetterGuess.Size = new Size(541, 72);
             lblLetterGuess.TabIndex = 0;
             // 
             // picGallows
             // 
             picGallows.Dock = DockStyle.Fill;
-            picGallows.Location = new Point(3, 4);
-            picGallows.Margin = new Padding(3, 4, 3, 4);
+            picGallows.Location = new Point(3, 3);
             picGallows.Name = "picGallows";
             tblMain.SetRowSpan(picGallows, 3);
-            picGallows.Size = new Size(314, 583);
+            picGallows.Size = new Size(274, 437);
             picGallows.SizeMode = PictureBoxSizeMode.Zoom;
             picGallows.TabIndex = 5;
             picGallows.TabStop = false;
             // 
             // frmHangman
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(945, 656);
+            ClientSize = new Size(827, 492);
             Controls.Add(tblMain);
             Controls.Add(Menu);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmHangman";
             Text = "Hangman";
             Menu.ResumeLayout(false);

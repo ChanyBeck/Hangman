@@ -54,7 +54,7 @@ namespace Hangman
             lblGameStatus.Text = "Guess A Letter";
             lblWordDisplay.Text = "";
             picGallows.ImageLocation = path + guessesused + ".PNG";
-}
+        }
         private void GetNewWord()
         {
             Random rnd = new();
@@ -103,7 +103,7 @@ namespace Hangman
                     lblGameStatus.Text = "You Lose";
                     break;
             }
-            
+
             lblScore.Text = "Score: " + score;
             lstbuttonalpha.ForEach(b => EnableButton(b, false));
             btnNewWord.Enabled = false;

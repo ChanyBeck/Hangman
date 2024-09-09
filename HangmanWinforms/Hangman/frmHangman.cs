@@ -23,6 +23,7 @@ namespace Hangman
             lstbuttonalpha.ForEach(b => EnableButton(b, false));
             btnNewWord.Enabled = false;
             lblGameStatus.Text = "Click Start To Begin";
+//AS Smart way of concatting the picture value!
             picGallows.ImageLocation = path + guessesused + ".PNG";
             lblScore.Text = "Score: " + score;
         }
@@ -112,6 +113,7 @@ namespace Hangman
         }
         private void BtnAlpha_Click(object? sender, EventArgs e)
         {
+//AS Move code out of event handler and into a procedure.
             Button b = new();
             if (sender != null)
             {

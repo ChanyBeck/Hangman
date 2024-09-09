@@ -56,6 +56,18 @@ namespace Hangman
             lblWordDisplay.Text = "";
             picGallows.ImageLocation = path + guessesused + ".PNG";
         }
+
+        private void LetterGuess(object? sender)
+        {
+            Button b = new();
+            if (sender != null)
+            {
+                b = sender as Button;
+            }
+            lblLetterGuess.Text += b.Text;
+            EnableButton(b, false);
+            LoopWord(b.Text.ToLower());
+        }
         private void GetNewWord()
         {
             Random rnd = new();
@@ -113,15 +125,8 @@ namespace Hangman
         }
         private void BtnAlpha_Click(object? sender, EventArgs e)
         {
-//AS Move code out of event handler and into a procedure.
-            Button b = new();
-            if (sender != null)
-            {
-                b = sender as Button;
-            }
-            lblLetterGuess.Text += b.Text;
-            EnableButton(b, false);
-            LoopWord(b.Text.ToLower());
+            //AS Move code out of event handler and into a procedure.
+            LetterGuess(sender);
         }
 
         private void BtnStart_NewWord_Click(object? sender, EventArgs e)
